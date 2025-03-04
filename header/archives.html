@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archives</title>
+    <link rel="stylesheet" href="/css/960_12_col.css">
+    <link rel="stylesheet" href="/css/dropmenu.css">
+    <style>
+        @font-face {
+            font-family: 'QuicksandBook';
+            src: url('/fonts/Quicksand_Book-webfont.eot');
+            font-weight: normal;
+            font-style: normal;
+        }
+    
+        body {
+            color: #ffffff;
+            background: #413f3b url("/images/bg.jpg");
+            font-family: QuicksandBook, Arial, Helvetica, sans-serif;
+            color: #B5C1AD;
+            font-size: 90%;
+            margin: 0px;
+            text-align: center;
+        }
+    
+        a {
+            color: #b5c1ad;
+            text-decoration: none;
+        }
+    
+        a:hover {
+            color: #ffffff;
+        }
+    
+        .header {
+            background-image: url("/images/bg-header.jpg");
+            padding: 0px 0px 0px 0px;
+            height: 100px;
+            position: fixed;
+            top: 0px;
+            width: 100%;
+            z-index: 50;
+        }
+    
+        .nav {
+            float: right;
+            font-family: QuicksandBook, Arial, Helvetica, sans-serif;
+            padding: 45px 0px 0px 0px;
+        }
+    
+        .wrapper {
+            width: 960px;
+            margin: 0px auto;
+            background-image: url("/images/bg-triangle.png");
+            background-repeat: no-repeat;
+            background-position: 0px 0px;
+            text-align: left;
+        }
+
+        .current-date {
+            font-family: QuicksandBook, Arial, Helvetica, sans-serif;
+            color: #B5C1AD
+        }
+    
+        .logo {
+            margin-bottom: 20px;
+        }
+    
+        h1, h2 {
+            font-family: QuicksandBook, Arial, Helvetica, sans-serif;
+            font-size: 75%;
+            color: #b5c1ad;
+        }
+    
+        h1 {
+            font-size: 240%;
+            margin-top: 140px;
+        }
+    
+        .date {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 75%;
+            color: #b5c1ad;
+        }
+    
+        .intro {
+            clear: left;
+            font-size: 90%;
+            line-height: 1.4em;
+        }
+    
+        .main-story {
+            background-image: url("/images/triangles.png");
+            background-repeat: no-repeat;
+            background-position: 122px 142px;
+            height: 570px;
+        }
+    
+        .more-articles {
+            border-top: 1px solid #ffffff;
+            padding: 10px;
+        }
+    
+        .more-articles p {
+            border-bottom: 1px solid #807c72;
+            padding: 5px 0px 15px 0px;
+            font-size: 80%;
+        }
+    
+        .more-articles p:last-child {
+            border-bottom: none;
+        }
+    
+        .footer {
+            clear: both;
+            background: rgba(0, 0, 0 , 0.2);
+            padding: 5px 10px;
+        }
+    
+        .footer p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 75%;
+            text-align: right;
+        }
+            
+        .footer a {
+            color: #807c72;
+        }
+
+        .floating-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #B5C1AD;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 50%;
+            padding: 10px 15px;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s;
+        }
+
+        .floating-button:hover {
+            background-color: #E17034;
+        }
+
+        .link-preview {
+            position: relative;
+            list-style: none;
+        }
+
+        .preview {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 25%;
+            width: 300px;
+            background-color: #413f3b;
+            border: 1px solid #807c72;
+            padding: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+        }
+
+        .link-preview:hover .preview {
+            display: block;
+        }
+
+        .preview-content {
+            padding: 10px;
+        }
+
+        .hr {
+            border: none;
+            border-top: 2px solid #807c72;
+        }
+    
+        </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container_12">
+            <div class="grid_5">
+                <img src="/images/logo.png" alt="Pedal Faster - The modern bicycle magazine" width="216" height="37" class="logo" />
+                <img src="/images/header-triangle.png" alt="" width="116" height="100">
+            </div>
+            <div class="nav grid_7">
+                <a href="/example.html">home</a> / <a href="/header/news.html">news</a> / <a href="/header/archives.html">archives</a> / <a href="/header/about.html">about</a> / <a href="/header/contact.html">contact</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="main-story container_12">
+            <div class="grid_6 push_6">
+                <h1>Archives</h1>
+            </div>
+            <div class="intro grid_3 push_9">
+                <span class="current-date"></span>
+                <p class="current-date"></p>
+                <button class="floating-button" onclick="goBack()">←</button>
+                <script>
+                    function goBack() {
+                    window.history.back();
+                }
+                </script>
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function () {
+                        let dateElement = document.querySelector(".current-date");
+
+                        let today = new Date(); 
+
+                        let day = today.getDate().toString().padStart(2, '0');
+                        let month = today.toLocaleString('et-EE', { month: 'long' }).toUpperCase();
+                        let year = today.getFullYear();
+
+                        let formattedDate = `${day} ${month} ${year}`;
+
+                        dateElement.textContent = formattedDate;
+                        });
+                    </script>
+            </div>
+        </div>
+        
+        <p>
+            <ul class="menu">
+                <li>
+                    <p><a href="/articles/articles.html">APRILL 2025</a></p>
+                    <ul class="submenu">
+                        <li><a href="/articles/Fixed_gear_forever.html">Fixed Gear Forever / 16 APRILL 2025</a></li>
+                        <li><a href="/articles/On_the_road.html">On the Road / 07 APRILL 2025</a></li>
+                        <li><a href="/articles/Pashley_cycles.html">Pasley Cycles / 03 APRILL 2025</a></li>
+                    </ul>
+                </li>
+            <ul class="menu">
+                <li>
+                    <p><a href="/articles/articles.html">MÄRTS 2025</a></p>
+                    <ul class="submenu">
+                        <li><a href="/articles/Frame_wars.html">Frame Wars / 28 MÄRTS 2025</a></li>
+                        <li><a href="/articles/touring_diary.html">Touring Diary / 25 MÄRTS 2025</a></li>
+                        <li><a href="/articles/2023_newcomers.html">2023 Newcomers / 19 MÄRTS 2025</a></li>
+                        <li><a href="/articles/innertube.html">InnerTube / 16 MÄRTS 2025</a></li>
+                        <li><a href="/articles/product_review.html">Product Review / 07 MÄRTS 2025</a></li>
+                    </ul>
+                </li>
+            <ul class="menu">
+                    <li>
+                        <p><a href="/articles/articles.html">VEEBRUAR 2025</a></p>
+                        <ul class="submenu">
+                            <li><a href="/articles/going_public.html">Going Public / 28 VEEBRUAR 2025</a></li>
+                            <li><a href="/articles/cycle_lane.html">Cycle Lane / 23 VEEBRUAR 2025</a></li>
+                            <li><a href="/articles/schwinn_fame.html">Scwinn Spitfire / 16 VEEBRUAR 2025</a></li>
+                            <li><a href="/articles/reader_survey.html">Reader Survey / 04 VEEBRUAR 2025</a></li>
+                        </ul>
+                    </li>
+            <ul class="menu">
+                    <li>
+                        <p><a href="/articles/articles.html">JAANUAR 2025</a></p>
+                        <ul class="submenu">
+                            <li><a href="/articles/chain_gang.html">Chain Gang / 29 JAANUAR 2025</a></li>
+                        </ul>
+                    </li>
+        </p>
+        <div class="footer clearfix">
+            <div class="container_12">
+                <p class="grid_12"><a href="/footer/legal_information.html">Legal Information</a> | <a href="/footer/privacy_policy.html">Privacy Policy</a> | <a href="/footer/copyright.html">Copyright &copy; Pedal Faster 2025</a></p>
+            </div>
+        </div>
+</body>
+</html>

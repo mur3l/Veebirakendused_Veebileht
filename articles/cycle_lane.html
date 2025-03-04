@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cycle Lane</title>
+    <link rel="stylesheet" href="/css/960_12_col.css">
+    <style>
+        @font-face {
+            font-family: 'QuicksandBook';
+            src: url('/fonts/Quicksand_Book-webfont.eot');
+            font-weight: normal;
+            font-style: normal;
+        }
+    
+        body {
+            color: #ffffff;
+            background: #413f3b url("/images/bg.jpg");
+            font-family: QuicksandBook, Arial, Helvetica, sans-serif;
+            color: #B5C1AD;
+            font-size: 90%;
+            margin: 0px;
+            text-align: center;
+        }
+    
+        a {
+            color: #b5c1ad;
+            text-decoration: none;
+        }
+    
+        a:hover {
+            color: #ffffff;
+        }
+    
+        .header {
+            background-image: url("/images/bg-header.jpg");
+            padding: 0px 0px 0px 0px;
+            height: 100px;
+            position: fixed;
+            top: 0px;
+            width: 100%;
+            z-index: 50;
+        }
+    
+        .nav {
+            float: right;
+            font-family: QuicksandBook, Arial, Helvetica, sans-serif;
+            padding: 45px 0px 0px 0px;
+        }
+    
+        .wrapper {
+            width: 960px;
+            margin: 0px auto;
+            background-image: url("/images/bg-triangle.png");
+            background-repeat: no-repeat;
+            background-position: 0px 0px;
+            text-align: left;
+        }
+
+        .current-date {
+            font-family: QuicksandBook, Arial, Helvetica, sans-serif;
+            color: #B5C1AD
+        }
+    
+        .logo {
+            margin-bottom: 20px;
+        }
+    
+        h1, h2 {
+            font-family: QuicksandBook, Arial, Helvetica, sans-serif;
+            font-size: 75%;
+            color: #b5c1ad;
+        }
+    
+        h1 {
+            font-size: 240%;
+            margin-top: 140px;
+        }
+    
+        .date {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 75%;
+            color: #b5c1ad;
+        }
+    
+        .intro {
+            clear: left;
+            font-size: 90%;
+            line-height: 1.4em;
+        }
+    
+        .main-story {
+            background-image: url("/images/triangles.png");
+            background-repeat: no-repeat;
+            background-position: 122px 142px;
+            height: 570px;
+        }
+    
+        .more-articles {
+            border-top: 1px solid #ffffff;
+            padding: 10px;
+        }
+    
+        .more-articles p {
+            border-bottom: 1px solid #807c72;
+            padding: 5px 0px 15px 0px;
+            font-size: 80%;
+        }
+    
+        .more-articles p:last-child {
+            border-bottom: none;
+        }
+    
+        .footer {
+            clear: both;
+            background: rgba(0, 0, 0 , 0.2);
+            padding: 5px 10px;
+        }
+    
+        .footer p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 75%;
+            text-align: right;
+        }
+            
+        .footer a {
+            color: #807c72;
+        }
+
+        .floating-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #B5C1AD;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 50%;
+            padding: 10px 15px;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s;
+        }
+        .floating-button:hover {
+            background-color: #E17034;
+        }
+    
+        </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container_12">
+            <div class="grid_5">
+                <img src="/images/logo.png" alt="Pedal Faster - The modern bicycle magazine" width="216" height="37" class="logo" />
+                <img src="/images/header-triangle.png" alt="" width="116" height="100">
+            </div>
+            <div class="nav grid_7">
+                <a href="/example.html">home</a> / <a href="/header/news.html">news</a> / <a href="/header/archives.html">archives</a> / <a href="/header/about.html">about</a> / <a href="/header/contact.html">contact</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="main-story container_12">
+            <div class="grid_6 push_6">
+                <h1>Cycle Lane</h1>
+            </div>
+            <div class="intro grid_3 push_9">
+                <p class="date">23 VEEBRUAR 2025</p>
+                <button class="floating-button" onclick="goBack()">←</button>
+                <script>
+                    function goBack() {
+                    window.history.back();
+                }
+                </script>
+            </div>
+        </div>
+        <p>
+            <ol type="1">
+                <li><b>Estonia</b></li>
+                    <p>Cyclists in Estonia enjoy specific rights and responsibilities under the Traffic Act.</p>
+                    <p>Cyclists must adhere to the same traffic rules as drivers of other vehicles when riding on a carriageway.</p>
+                    <p>Children aged 10-15 must have a cyclist's permit to ride on carriageways, and cyclists under 16 must wear a helmet.</p>
+                    <p>Cyclists can ride on cycle tracks, cycle lanes, or as close to the far right side of the carriageway as possible, except when making a left turn.</p>
+                    <p>Cyclists must not operate a vehicle while intoxicated, be distracted by other activities, or carry objects that hamper their driving.</p>
+                
+                <li><b>Finland</b></li>
+                    <p>Cyclists in Finland are required to follow specific traffic rules to ensure safety and compliance.</p>
+                    <p>Cyclists must use designated cycle paths if available, and if not, they should ride on the right side of the road or on the verge.</p>
+                    <p>Cyclists must obey traffic signals, give way to vehicles and pedestrians when required, and use appropriate lighting during dark conditions.</p>
+                    <p>Children under 12 may ride on pavements, but they must yield to pedestrians.</p>
+                    <p>Additionally, cyclists must give way to buses leaving bus stops if the cycle lane passes on the right side of the bus stop</p>
+
+                <li><b>Europe</b></li>
+                    <p>Cyclists in Europe enjoy specific rights and responsibilities under various national and EU-wide regulations.</p>
+                    <p>According to the Vienna Convention, a cycle is defined as a vehicle with at least two wheels propelled solely by the muscular energy of the rider.</p>
+                    <p>Cyclists must ensure their bicycles are equipped with efficient brakes, a bell, and appropriate lighting and reflectors for visibility.</p>
+                    <p>In many European countries, the use of cycle helmets is mandatory for certain age groups or in specific situations.</p>
+                    <p>For example, helmets are required for all cyclists in Malta, for children up to 15 years in Sweden, and for cyclists outside urban areas in Spain.</p>
+                    <p>Cyclists must adhere to traffic rules, such as using designated cycle paths where available and giving way to pedestrians and other vehicles when required.</p>
+                    <p>In some countries, the use of cycle lanes marked with blue circle signs is compulsory, while blue square signs indicate optional cycleways.</p>
+                    <p>Cyclists should also be aware of local regulations regarding lighting, reflectors, and other safety equipment to ensure compliance and safety on the roads.</p>
+            </ol>
+        </p>
+
+        <div class="footer clearfix">
+            <div class="container_12">
+                <p class="grid_12"><a href="/footer/legal_information.html">Legal Information</a> | <a href="/footer/privacy_policy.html">Privacy Policy</a> | <a href="/footer/copyright.html">Copyright &copy; Pedal Faster 2025</a></p>
+            </div>
+        </div>
+</body>
+</html>

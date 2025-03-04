@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Articles</title>
+    <link rel="stylesheet" href="/css/960_12_col.css">
+    <style>
+        @font-face {
+            font-family: 'QuicksandBook';
+            src: url('/fonts/Quicksand_Book-webfont.eot');
+            font-weight: normal;
+            font-style: normal;
+        }
+    
+        body {
+            color: #ffffff;
+            background: #413f3b url("/images/bg.jpg");
+            font-family: QuicksandBook, Arial, Helvetica, sans-serif;
+            color: #B5C1AD;
+            font-size: 90%;
+            margin: 0px;
+            text-align: center;
+        }
+    
+        a {
+            color: #b5c1ad;
+            text-decoration: none;
+        }
+    
+        a:hover {
+            color: #ffffff;
+        }
+    
+        .header {
+            background-image: url("/images/bg-header.jpg");
+            padding: 0px 0px 0px 0px;
+            height: 100px;
+            position: fixed;
+            top: 0px;
+            width: 100%;
+            z-index: 50;
+        }
+    
+        .nav {
+            float: right;
+            font-family: QuicksandBook, Arial, Helvetica, sans-serif;
+            padding: 45px 0px 0px 0px;
+        }
+    
+        .wrapper {
+            width: 960px;
+            margin: 0px auto;
+            background-image: url("/images/bg-triangle.png");
+            background-repeat: no-repeat;
+            background-position: 0px 0px;
+            text-align: left;
+        }
+
+        .current-date {
+            font-family: QuicksandBook, Arial, Helvetica, sans-serif;
+            color: #B5C1AD
+        }
+    
+        .logo {
+            margin-bottom: 20px;
+        }
+    
+        h1, h2 {
+            font-family: QuicksandBook, Arial, Helvetica, sans-serif;
+            font-size: 75%;
+            color: #b5c1ad;
+        }
+    
+        h1 {
+            font-size: 240%;
+            margin-top: 140px;
+        }
+    
+        .date {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 75%;
+            color: #b5c1ad;
+        }
+    
+        .intro {
+            clear: left;
+            font-size: 90%;
+            line-height: 1.4em;
+        }
+    
+        .main-story {
+            background-image: url("/images/triangles.png");
+            background-repeat: no-repeat;
+            background-position: 122px 142px;
+            height: 570px;
+        }
+    
+        .more-articles {
+            border-top: 1px solid #ffffff;
+            padding: 10px;
+        }
+    
+        .more-articles p {
+            border-bottom: 1px solid #807c72;
+            padding: 5px 0px 15px 0px;
+            font-size: 80%;
+        }
+    
+        .more-articles p:last-child {
+            border-bottom: none;
+        }
+    
+        .footer {
+            clear: both;
+            background: rgba(0, 0, 0 , 0.2);
+            padding: 5px 10px;
+        }
+    
+        .footer p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 75%;
+            text-align: right;
+        }
+            
+        .footer a {
+            color: #807c72;
+        }
+
+        .floating-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #B5C1AD;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 50%;
+            padding: 10px 15px;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s;
+        }
+
+        .floating-button:hover {
+            background-color: #E17034;
+        }
+
+        .hr {
+            border: none;
+            border-top: 2px solid #807c72;
+        }
+    
+        </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container_12">
+            <div class="grid_5">
+                <img src="/images/logo.png" alt="Pedal Faster - The modern bicycle magazine" width="216" height="37" class="logo" />
+                <img src="/images/header-triangle.png" alt="" width="116" height="100">
+            </div>
+            <div class="nav grid_7">
+                <a href="/example.html">home</a> / <a href="/header/news.html">news</a> / <a href="/header/archives.html">archives</a> / <a href="/header/about.html">about</a> / <a href="/header/contact.html">contact</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="main-story container_12">
+            <div class="grid_6 push_6">
+                <h1>Articles</h1>
+            </div>
+            <div class="intro grid_3 push_9">
+                <span class="current-date"></span>
+                <p class="current-date"></p>
+                <button class="floating-button" onclick="goBack()">←</button>
+                <script>
+                    function goBack() {
+                    window.history.back();
+                }
+                </script>
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function () {
+                        let dateElement = document.querySelector(".current-date");
+
+                        let today = new Date(); 
+
+                        let day = today.getDate().toString().padStart(2, '0');
+                        let month = today.toLocaleString('et-EE', { month: 'long' }).toUpperCase();
+                        let year = today.getFullYear();
+
+                        let formattedDate = `${day} ${month} ${year}`;
+
+                        dateElement.textContent = formattedDate;
+                        });
+                    </script>
+                    
+            </div>
+        </div>
+        
+        <p>
+            <a href="/articles/Fixed_gear_forever.html">Fixed Gear Forever</a> / 16 APRILL 2025
+            <p>
+                <img src="/images/veloheld/Beauty1.jpg" alt="Beauty1" width="25%" height="25%">
+                <img src="/images/veloheld/Beauty2.jpg" alt="Beauty2" width="25%" height="25%">
+                <img src="/images/veloheld/Beauty3.jpg" alt="Beauty3" width="25%" height="25%">
+            </p>
+        </p>
+        <hr class="hr">
+        <p>
+            <a href="/articles/On_the_road.html">On the Road: From the fixed gear fanatic's point of view:</a> / 07 APRILL 2025 
+            <p>
+                <img src="/images/on_the_road/Riding_Fixie.png" alt="Riding_Fixie" width="25%" height="25%">
+            </p> 
+        </p>
+        <hr class="hr">
+        <p>
+            <a href="/articles/Pashley_cycles.html">Brand history: Pashley Cycles:</a> / 3 APRILL 2025
+            <p>
+                <img src="/images/pashley_cycles/Pashley_cycles.webp" alt="Pashley_cycles" width="25%" height="25%">
+            </p>
+        </p>
+        <hr class="hr">
+        <p>
+            <a href="/articles/Frame_wars.html">Frame Wars: Innovations in cycle manufacture and repair:</a> / 28 MÄRTS 2025
+            <p>
+                <img src="/images/frame_wars/Different_styles.jpg" alt="Different_styles" width="25%" height="25%">
+            </p>
+        </p>
+        <hr class="hr">
+        <p>
+            <a href="/articles/touring_diary.html">Touring Diary: A sketchbook in your basket:</a> / 25 MÄRTS 2025
+            <p>
+                <img src="/images/touring_diary/All_steps.gif" alt="All_steps" width="25%" height="25%">
+            </p>
+        </p>
+        <hr class="hr">
+        <p>
+            <a href="/articles/2023_newcomers.html">Top Ten Newcomers for 2023: A peek at what's to come:</a> / 19 MÄRTS 2025
+            <p>
+                <img src="/images/2023_newcomers/All_newcomers.gif" alt="All_newcomers" width="25%" height="25%">
+            </p>
+        </p>
+        <hr class="hr">
+        <p>
+            <a href="/articles/innertube.html">InnerTube: The bet cycling videos on the web:</a> / 16 MÄRTS 2025
+            <p>
+                <img src="/images/inner_tube/Trio.avif" alt="Trio1" width="25%" height="25%">
+            </p>
+        </p>
+        <hr class="hr">
+        <p>
+            <a href="/articles/product_review.html">Product review: All baskets were not created equal:</a> / 07 MÄRTS 2025
+            <p>
+                <img src="/images/product_review/All_baskets.gif" alt="All_baskets" width="25%" height="25%">
+            </p>
+        </p>
+        <hr class="hr">
+        <p>
+            <a href="/articles/going_public.html">Going Public: Out & about with the founder of Public:</a> / 28 VEEBRUAR 2025
+            <p>
+                <img src="/images/going_public/going_public.svg" alt="Going_Public" width="25%" height="25%">
+            </p>
+        </p>
+        <hr class="hr">
+        <p>
+            <a href="/articles/cycle_lane.html">Cycle Lane Defence: Know your rights:</a> / 23 VEEBRUAR 2025
+            <p>
+                <img src="/images/cycle_lane/cyclist_accident.jpg" alt="Cyclist_accident" width="25%" height="25%">
+            </p>
+        </p>
+        <hr class="hr">
+        <p>
+            <a href="/articles/schwinn_fame.html">Bicycle Hall of Fame: The 1958 Schwinn Spitfire:</a> / 16 VEEBRUAR 2025
+                <p>
+                    <img src="/images/scwinn_spitfire/scwinn_spitfire2.jpg" alt="Swinn_Hall_of_Fame" width="25%" height="25%">
+                </p>
+            </a>
+        </p>
+        <hr class="hr">
+        <p>
+            <a href="/articles/reader_survey.html">Reader Survey: Share your thoughts with us!</a> / 4 VEEBRUAR 2025
+            <p>
+                <img src="/images/survey/survey.png" alt="survey" width="25%" height="25%">
+            </p>
+        </p>
+        <hr class="hr">
+        <p>
+            <a href="/articles/chain_gang.html">Chain Gang: The evolution of the humble bike chain:</a> / 29 JAANUAR 2025
+            <p>
+                <img src="/images/chain_evolution/Chain.jpg" alt="Bicycle_chain" width="25%" height="25%">
+            </p>
+        </p>
+
+        <div class="footer clearfix">
+            <div class="container_12">
+                <p class="grid_12"><a href="/footer/legal_information.html">Legal Information</a> | <a href="/footer/privacy_policy.html">Privacy Policy</a> | <a href="/footer/copyright.html">Copyright &copy; Pedal Faster 2025</a></p>
+            </div>
+        </div>
+</body>
+</html>

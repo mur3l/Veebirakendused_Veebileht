@@ -3,32 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Page</title>
-    <link rel="stylesheet" href="css/960_12_col.css">
+    <title>Pedal Faster</title>
+    <link rel="stylesheet" href="/css/960_12_col.css">
     <style>
         @font-face {
             font-family: 'QuicksandBook';
-            src: url('fonts/Quicksand_Book-webfont.eot');
+            src: url('/fonts/Quicksand_Book-webfont.eot');
             font-weight: normal;
             font-style: normal;
         }
+
         body {
             color: #ffffff;
-            background: #413f3b url("images/bg.jpg");
-            font-family: Georgia, 'Times New Roman', Times, serif;
+            background: #413f3b url("/images/bg.jpg");
+            font-family: QuicksandBook, Arial, Helvetica, sans-serif;
+            color: #B5C1AD;
             font-size: 90%;
             margin: 0px;
             text-align: center;
         }
+
         a {
             color: #b5c1ad;
             text-decoration: none;
         }
+
         a:hover {
             color: #ffffff;
         }
+
         .header {
-            background-image: url("images/bg-header.jpg");
+            background-image: url("/images/bg-header.jpg");
             padding: 0px 0px 0px 0px;
             height: 100px;
             position: fixed;
@@ -36,69 +41,83 @@
             width: 100%;
             z-index: 50;
         }
+
         .nav {
             float: right;
             font-family: QuicksandBook, Arial, Helvetica, sans-serif;
             padding: 45px 0px 0px 0px;
         }
+
         .wrapper {
             width: 960px;
             margin: 0px auto;
-            background-image: url("images/bg-triangle.png");
+            background-image: url("/images/bg-triangle.png");
             background-repeat: no-repeat;
             background-position: 0px 0px;
             text-align: left;
         }
+
         .logo {
             margin-bottom: 20px;
         }
+
         h1, h2 {
             font-family: QuicksandBook, Arial, Helvetica, sans-serif;
             font-size: 75%;
             color: #b5c1ad;
         }
+
         h1 {
             font-size: 240%;
             margin-top: 140px;
         }
+
         .date {
             font-family: Arial, Helvetica, sans-serif;
             font-size: 75%;
             color: #b5c1ad;
         }
+
         .intro {
             clear: left;
             font-size: 90%;
             line-height: 1.4em;
         }
+
         .main-story {
-            background-image: url("images/triangles.png");
+            background-image: url("/images/triangles.png");
             background-repeat: no-repeat;
             background-position: 122px 142px;
             height: 570px;
         }
+
         .more-articles {
             border-top: 1px solid #ffffff;
             padding: 10px;
         }
+
         .more-articles p {
             border-bottom: 1px solid #807c72;
             padding: 5px 0px 15px 0px;
             font-size: 80%;
         }
+
         .more-articles p:last-child {
             border-bottom: none;
         }
+
         .footer {
             clear: both;
             background: rgba(0, 0, 0 , 0.2);
             padding: 5px 10px;
         }
+
         .footer p {
             font-family: Arial, Helvetica, sans-serif;
             font-size: 75%;
             text-align: right;
         }
+        
         .footer a {
             color: #807c72;
         }
@@ -109,11 +128,11 @@
     <div class="header">
         <div class="container_12">
             <div class="grid_5">
-                <img src="images/logo.png" alt="Pedal Faster - The modern bicycle magazine" width="216" height="37" class="logo" />
-                <img src="images/header-triangle.png" alt="" width="116" height="100">
+                <img src="/images/logo.png" alt="Pedal Faster - The modern bicycle magazine" width="216" height="37" class="logo" />
+                <img src="/images/header-triangle.png" alt="" width="116" height="100">
             </div>
             <div class="nav grid_7">
-                <a href="">home</a> / <a href="">news</a> / <a href="">archives</a> / <a href="">about</a> / <a href="">contact</a>
+                <a href="/example.html">home</a> / <a href="/header/news.html">news</a> / <a href="/header/archives.html">archives</a> / <a href="/header/about.html">about</a> / <a href="/header/contact.html">contact</a>
             </div>
         </div>
     </div>
@@ -121,10 +140,10 @@
     <div class="wrapper">
         <div class="main-story container_12">
             <div class="grid_6 push_6">
-                <h1><a href="">Fixed Gear Forever</a></h1>
+                <h1><a href="/articles/Fixed_gear_forever.html">Fixed Gear Forever</a></h1>
             </div>
             <div class="intro grid_3 push_9">
-                <p class="date">16 APRILL 2025</p>
+                <p class="date">25 MÄRTS 2025</p>
                 <p>
                     The veloheld combines minimalist design with superb 
                     quality. Devoid of exessive graphics and gear shift
@@ -138,41 +157,41 @@
                     For those who want to create their bike themselves,
                     the veloheld frames come in three sizes and two 
                     colors and are the perfect starting point.
-                    <a href="">Continue reading...</a>
+                    <a href="/articles/Fixed_gear_forever.html">Continue reading...</a>
                 </p>
             </div>
             <div class="more-articles container_12">
-                <h2 class="grid_12"><a href="">More Articles</a></h2>
+                <h2 class="grid_12"><a href="/articles/articles.html">More Articles</a></h2>
                 <div class="grid_3">
-                    <img src="images/more1.jpg" alt="The road ahead" width="220" height="125" />
-                    <p><a href="">On the Road: From the fixed gear fanatic's point of view</a></p>
-                    <p><a href="">Brand History: Pashley Cycles - hand built in England</a></p>
-                    <p><a href="">Frame Wars: Innovations in cycle manufacture and repair</a></p>
+                    <img src="/images/more1.jpg" alt="The road ahead" width="220" height="125" />
+                    <p><a href="/articles/On_the_road.html">On the Road: From the fixed gear fanatic's point of view</a></p>
+                    <p><a href="/articles/Pashley_cycles.html">Brand History: Pashley Cycles - hand built in England</a></p>
+                    <p><a href="/articles/Frame_wars.html">Frame Wars: Innovations in cycle manufacture and repair</a></p>
                 </div>
                 <div class="grid_3">
-                    <img src="images/more2.jpg" alt="Sketchbook" width="220" height="125" />
-                    <p><a href="">Touring Diary: A sketchbook in your basket</a></p>
-                    <p><a href="">Top Ten Newcomers for 2023: A peek at what's to come</a></p>
-                    <p><a href="">InnerTube: The best cycling videos on the web</a></p>
+                    <img src="/images/more2.jpg" alt="Sketchbook" width="220" height="125" />
+                    <p><a href="/articles/touring_diary.html">Touring Diary: A sketchbook in your basket</a></p>
+                    <p><a href="/articles/2023_newcomers.html">Top Ten Newcomers for 2023: A peek at what's to come</a></p>
+                    <p><a href="/articles/innertube.html">InnerTube: The best cycling videos on the web</a></p>
                 </div>
                 <div class="grid_3">
-                    <img src="images/more3.jpg" alt="Repair shop sign" width="220" height="125" />
-                    <p><a href="">Product Review: All baskets were not created equal</a></p>
-                    <p><a href="">Going Public: Out &amp; about with the founder of Public</a></p>
-                    <p><a href="">Cycle Lane Defence: Know your rights</a></p>
+                    <img src="/images/more3.jpg" alt="Repair shop sign" width="220" height="125" />
+                    <p><a href="/articles/product_review.html">Product Review: All baskets were not created equal</a></p>
+                    <p><a href="/articles/going_public.html">Going Public: Out &amp; about with the founder of Public</a></p>
+                    <p><a href="/articles/cycle_lane.html">Cycle Lane Defence: Know your rights</a></p>
                 </div>
                 <div class="grid_3">
-                    <img src="images/more4.jpg" alt="Schwinn Spitfire" width="220" height="125" />
-                    <p><a href="">Bicycle Hall of Fame: The 1958 Schwinn Spitfire</a></p>
-                    <p><a href="">Reader Survey: Share your thoughts with us!</a></p>
-                    <p><a href="">Chain Gang: The evolution of tthe humble bike chain</a></p>
+                    <img src="/images/more4.jpg" alt="Schwinn Spitfire" width="220" height="125" />
+                    <p><a href="/articles/schwinn_fame.html">Bicycle Hall of Fame: The 1958 Schwinn Spitfire</a></p>
+                    <p><a href="/articles/reader_survey.html">Reader Survey: Share your thoughts with us!</a></p>
+                    <p><a href="/articles/chain_gang.html">Chain Gang: The evolution of tthe humble bike chain</a></p>
                 </div>
             </div>
         </div>
 
         <div class="footer clearfix">
             <div class="container_12">
-                <p class="grid_12"><a href="">Legal Information</a> | <a href="">Privacy Policy</a> | <a href="">Copyright &copy; Pedal Faster 2025</a></p>
+                <p class="grid_12"><a href="/footer/legal_information.html">Legal Information</a> | <a href="/footer/privacy_policy.html">Privacy Policy</a> | <a href="/footer/copyright.html">Copyright &copy; Pedal Faster 2025</a></p>
             </div>
         </div>
     </div>

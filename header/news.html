@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <link rel="stylesheet" href="/css/960_12_col.css">
+    <style>
+        @font-face {
+            font-family: 'QuicksandBook';
+            src: url('/fonts/Quicksand_Book-webfont.eot');
+            font-weight: normal;
+            font-style: normal;
+        }
+    
+        body {
+            color: #ffffff;
+            background: #413f3b url("/images/bg.jpg");
+            font-family: QuicksandBook, Arial, Helvetica, sans-serif;
+            color: #B5C1AD;
+            font-size: 90%;
+            margin: 0px;
+            text-align: center;
+        }
+    
+        a {
+            color: #b5c1ad;
+            text-decoration: none;
+        }
+    
+        a:hover {
+            color: #ffffff;
+        }
+    
+        .header {
+            background-image: url("/images/bg-header.jpg");
+            padding: 0px 0px 0px 0px;
+            height: 100px;
+            position: fixed;
+            top: 0px;
+            width: 100%;
+            z-index: 50;
+        }
+    
+        .nav {
+            float: right;
+            font-family: QuicksandBook, Arial, Helvetica, sans-serif;
+            padding: 45px 0px 0px 0px;
+        }
+    
+        .wrapper {
+            width: 960px;
+            margin: 0px auto;
+            background-image: url("/images/bg-triangle.png");
+            background-repeat: no-repeat;
+            background-position: 0px 0px;
+            text-align: left;
+        }
+
+        .current-date {
+            font-family: QuicksandBook, Arial, Helvetica, sans-serif;
+            color: #B5C1AD
+        }
+    
+        .logo {
+            margin-bottom: 20px;
+        }
+    
+        h1, h2 {
+            font-family: QuicksandBook, Arial, Helvetica, sans-serif;
+            font-size: 75%;
+            color: #b5c1ad;
+        }
+    
+        h1 {
+            font-size: 240%;
+            margin-top: 140px;
+        }
+    
+        .date {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 75%;
+            color: #b5c1ad;
+        }
+    
+        .intro {
+            clear: left;
+            font-size: 90%;
+            line-height: 1.4em;
+        }
+    
+        .main-story {
+            background-image: url("/images/triangles.png");
+            background-repeat: no-repeat;
+            background-position: 122px 142px;
+            height: 570px;
+        }
+    
+        .more-articles {
+            border-top: 1px solid #ffffff;
+            padding: 10px;
+        }
+    
+        .more-articles p {
+            border-bottom: 1px solid #807c72;
+            padding: 5px 0px 15px 0px;
+            font-size: 80%;
+        }
+    
+        .more-articles p:last-child {
+            border-bottom: none;
+        }
+    
+        .footer {
+            clear: both;
+            background: rgba(0, 0, 0 , 0.2);
+            padding: 5px 10px;
+        }
+    
+        .footer p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 75%;
+            text-align: right;
+        }
+            
+        .footer a {
+            color: #807c72;
+        }
+
+        .floating-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #B5C1AD;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 50%;
+            padding: 10px 15px;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s;
+        }
+
+        .floating-button:hover {
+            background-color: #E17034;
+        }
+
+        .link-preview {
+            position: relative;
+            list-style: none;
+        }
+
+        .preview {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 25%;
+            width: 300px;
+            background-color: #413f3b;
+            border: 1px solid #807c72;
+            padding: 10px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+            z-index: 10;
+        }
+
+        .link-preview:hover .preview {
+            display: block;
+        }
+
+        .preview-content {
+            padding: 10px;
+        }
+
+        .hr {
+            border: none;
+            border-top: 2px solid #807c72;
+        }
+    
+        </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container_12">
+            <div class="grid_5">
+                <img src="/images/logo.png" alt="Pedal Faster - The modern bicycle magazine" width="216" height="37" class="logo" />
+                <img src="/images/header-triangle.png" alt="" width="116" height="100">
+            </div>
+            <div class="nav grid_7">
+                <a href="/example.html">home</a> / <a href="/header/news.html">news</a> / <a href="/header/archives.html">archives</a> / <a href="/header/about.html">about</a> / <a href="/header/contact.html">contact</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="main-story container_12">
+            <div class="grid_6 push_6">
+                <h1>News</h1>
+            </div>
+            <div class="intro grid_3 push_9">
+                <span class="current-date"></span>
+                <p class="current-date"></p>
+                <button class="floating-button" onclick="goBack()">←</button>
+                <script>
+                    function goBack() {
+                    window.history.back();
+                }
+                </script>
+                    <script>
+                        document.addEventListener("DOMContentLoaded", function () {
+                        let dateElement = document.querySelector(".current-date");
+
+                        let today = new Date(); 
+
+                        let day = today.getDate().toString().padStart(2, '0');
+                        let month = today.toLocaleString('et-EE', { month: 'long' }).toUpperCase();
+                        let year = today.getFullYear();
+
+                        let formattedDate = `${day} ${month} ${year}`;
+
+                        dateElement.textContent = formattedDate;
+                        });
+                    </script>
+            </div>
+        </div>
+        
+        <p>
+            <li class="link-preview">
+                <a href="/articles/Fixed_gear_forever.html">Fixed Gear Forever</a> / 16 APRIL 2025
+                    <div class="preview">
+                        <div class="preview-content">
+                            <h2>Fixed Gear Forever</h2>
+                            <p>This article explores the enduring appeal of fixed-gear bicycles and why they remain popular among cyclists.</p>
+                            <img src="/images/news/fixed_gear.gif" alt="Fixed Gear Image" style="width: 100%;">
+                        </div>
+                    </div>
+                </li>
+            <hr class="hr">
+            <li class="link-preview">
+                <a href="/articles/On_the_road.html">On the Road: From the fixed gear fanatic's point of view</a> / 07 APRILL 2025
+                    <div class="preview">
+                        <div class="preview-content">
+                            <h2>On the Road: From the fixed gear fanatic's point of view</h2>
+                            <p>Explore the unique perspective of a fixed gear enthusiast and the appeal of this minimalist cycling style.</p>
+                            <img src="/images/news/on_the_road.gif" alt="On the Road" style="width: 100%;">
+                        </div>
+                    </div>
+                </li>
+            <hr class="hr">
+            <li class="link-preview">
+                <a href="/articles/Pashley_cycles.html">Brand history: Pashley Cycles</a> / 03 APRILL 2025
+                    <div class="preview">
+                        <div class="preview-content">
+                            <h2>Brand history: Pashley Cycles</h2>
+                            <p>Discover the rich heritage and craftsmanship behind Pashley Cycles, the UK's longest-established bicycle manufacturer.</p>
+                            <img src="/images/news/pashley_cycles.gif" alt="Pashley Cycles" style="width: 100%;">
+                        </div>
+                    </div>
+                </li>
+            <hr class="hr">
+            <li class="link-preview">
+                <a href="/articles/Frame_wars.html">Frame Wars: Innovations in cycle manufacture and repair</a> / 28 MÄRTS 2025
+                    <div class="preview">
+                        <div class="preview-content">
+                            <h2>Frame Wars: Innovations in cycle manufacture and repair</h2>
+                            <p>Dive into the latest advancements in bicycle frame materials and repair techniques, reshaping the cycling industry.</p>
+                            <img src="/images/news/frame_wars.gif" alt="Frame Wars" style="width: 100%;">
+                        </div>
+                    </div>
+                </li>
+            <hr class="hr">
+            <li class="link-preview">
+                <a href="/articles/touring_diary.html">Touring Diary: A sketchbook in your pocket</a> / 25 MÄRTS 2025
+                    <div class="preview">
+                        <div class="preview-content">
+                            <h2>Touring Diary: A sketchbook in your pocket</h2>
+                            <p>Uncover how to start drawing your cycling journeys with a portable sketchbook, capturing memories on the go.</p>
+                            <img src="/images/news/touring_diary.gif" alt="Touring Diary" style="width: 100%;">
+                        </div>
+                    </div>
+                </li>
+            <hr class="hr">
+            <li class="link-preview">
+                <a href="/articles/2023_newcomers.html">Top Ten Newcomers for 2023: A peek at what's to come</a> / 19 MÄRTS 2025
+                    <div class="preview">
+                        <div class="preview-content">
+                            <h2>Top Ten Newcomers for 2023: A peek at what's to come</h2>
+                            <p>Get a sneak peek at the top ten bicycles set to make waves in 2023, showcasing the latest innovations and designs.</p>
+                            <img src="/images/news/2023_newcomers.gif" alt="2023 Newcomers" style="width: 100%;">
+                        </div>
+                    </div>
+                </li>
+            <hr class="hr">
+            <li class="link-preview">
+                <a href="/articles/innertube.html">InnerTube: The best cycling videos on the web</a> / 16 MÄRTS 2025
+                    <div class="preview">
+                        <div class="preview-content">
+                            <h2>InnerTube: The best cycling videos on the web</h2>
+                            <p>Discover the most captivating cycling videos available online, offering inspiration and entertainment for cyclists.</p>
+                            <img src="/images/news/innertube.gif" alt="InnerTube" style="width: 100%;">
+                        </div>
+                    </div>
+                </li>
+            <hr class="hr">
+            <li class="link-preview">
+                <a href="/articles/product_review.html">Product review: All baskets were not created equal</a> / 07 MÄRTS 2025
+                    <div class="preview">
+                        <div class="preview-content">
+                            <h2>Product review: All baskets were not created equal</h2>
+                            <p>An insightful comparison of five top bicycle baskets, highlighting their unique features and functionalities.</p>
+                            <img src="/images/news/product_review.gif" alt="Product Review" style="width: 100%;">
+                        </div>
+                    </div>
+                </li>
+            <hr class="hr">
+            <li class="link-preview">
+                <a href="/articles/going_public.html">Going Public: Out & about with the founder of Public</a> / 28 VEEBRUAR 2025
+                    <div class="preview">
+                        <div class="preview-content">
+                            <h2>Going Public: Out & about with the founder of Public</h2>
+                            <p>Follow the journey of the founder of Public as they navigate the challenges of launching their company to the public market.</p>
+                            <img src="/images/news/going_public.png" alt="Going Public" style="width: 100%;">
+                        </div>
+                    </div>
+                </li>
+            <hr class="hr">
+            <li class="link-preview">
+                <a href="/articles/cycle_lane.html">Cycle Lane Defence: Know your rights</a> / 23 VEEBRUAR 2025
+                    <div class="preview">
+                        <div class="preview-content">
+                            <h2>Cycle Lane Defence: Know your rights</h2>
+                            <p>Understand your rights as a cyclist and how to defend them when navigating cycle lanes and public roads.</p>
+                            <img src="/images/news/cycle_lane.png" alt="Cycle Lane" style="width: 100%;">
+                        </div>
+                    </div>
+                </li>
+            <hr class="hr">
+            <li class="link-preview">
+                <a href="/articles/schwinn_fame.html">Bicycle Hall of Fame: The 1958 Schwinn Spitfire</a> / 16 VEEBRUAR 2025
+                    <div class="preview">
+                        <div class="preview-content">
+                            <h2>Bicycle Hall of Fame: The 1958 Schwinn Spitfire</h2>
+                            <p>Celebrate the legacy of the 1958 Schwinn Spitfire, a timeless icon in the Bicycle Hall of Fame.</p>
+                            <img src="/images/news/scwinn_spitfire.png" alt="Scwinn Spitfire" style="width: 100%;">
+                        </div>
+                    </div>
+                </li>
+            <hr class="hr">
+            <li class="link-preview">
+                <a href="/articles/reader_survey.html">Reader Survey: Share your thoughts with us!</a> / 4 VEEBRUAR 2025
+                    <div class="preview">
+                        <div class="preview-content">
+                            <h2>Reader Survey: Share your thoughts with us!</h2>
+                            <p>We're eager to hear from you! Share your opinions, suggestions, and feedback to help us improve and better serve your interests.</p>
+                            <img src="/images/news/" alt="" style="width: 100%;">
+                        </div>
+                    </div>
+                </li>
+            <hr class="hr">
+            <li class="link-preview">
+                <a href="/articles/chain_gang.html">Chain Gang: The evolution of the humble bike chain</a> / 29 JAANUAR 2025
+                    <div class="preview">
+                        <div class="preview-content">
+                            <h2>Chain Gang: The evolution of the humble bike chain</h2>
+                            <p>Trace the development of the bicycle chain from its simple beginnings to its modern-day innovations and advancements.</p>
+                            <img src="/images/news/chain_gang.gif" alt="Chain Gang" style="width: 100%;">
+                        </div>
+                    </div>
+                </li>
+        </p>
+
+        <div class="footer clearfix">
+            <div class="container_12">
+                <p class="grid_12"><a href="/footer/legal_information.html">Legal Information</a> | <a href="/footer/privacy_policy.html">Privacy Policy</a> | <a href="/footer/copyright.html">Copyright &copy; Pedal Faster 2025</a></p>
+            </div>
+        </div>
+</body>
+</html>

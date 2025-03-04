@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fixed Gear Forever</title>
+    <link rel="stylesheet" href="/css/960_12_col.css">
+    <style>
+        @font-face {
+            font-family: 'QuicksandBook';
+            src: url('/fonts/Quicksand_Book-webfont.eot');
+            font-weight: normal;
+            font-style: normal;
+        }
+    
+        body {
+            color: #ffffff;
+            background: #413f3b url("/images/bg.jpg");
+            font-family: QuicksandBook, Arial, Helvetica, sans-serif;
+            color: #B5C1AD;
+            font-size: 90%;
+            margin: 0px;
+            text-align: center;
+        }
+    
+        a {
+            color: #b5c1ad;
+            text-decoration: none;
+        }
+    
+        a:hover {
+            color: #ffffff;
+        }
+    
+        .header {
+            background-image: url("/images/bg-header.jpg");
+            padding: 0px 0px 0px 0px;
+            height: 100px;
+            position: fixed;
+            top: 0px;
+            width: 100%;
+            z-index: 50;
+        }
+    
+        .nav {
+            float: right;
+            font-family: QuicksandBook, Arial, Helvetica, sans-serif;
+            padding: 45px 0px 0px 0px;
+        }
+    
+        .wrapper {
+            width: 960px;
+            margin: 0px auto;
+            background-image: url("/images/bg-triangle.png");
+            background-repeat: no-repeat;
+            background-position: 0px 0px;
+            text-align: left;
+        }
+    
+        .logo {
+            margin-bottom: 20px;
+        }
+    
+        h1, h2 {
+            font-family: QuicksandBook, Arial, Helvetica, sans-serif;
+            font-size: 75%;
+            color: #b5c1ad;
+        }
+    
+        h1 {
+            font-size: 240%;
+            margin-top: 140px;
+        }
+    
+        .date {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 75%;
+            color: #b5c1ad;
+        }
+    
+        .intro {
+            clear: left;
+            font-size: 90%;
+            line-height: 1.4em;
+        }
+    
+        .main-story {
+            background-image: url("/images/triangles.png");
+            background-repeat: no-repeat;
+            background-position: 122px 142px;
+            height: 570px;
+        }
+    
+        .more-articles {
+            border-top: 1px solid #ffffff;
+            padding: 10px;
+        }
+    
+        .more-articles p {
+            border-bottom: 1px solid #807c72;
+            padding: 5px 0px 15px 0px;
+            font-size: 80%;
+        }
+    
+        .more-articles p:last-child {
+            border-bottom: none;
+        }
+    
+        .footer {
+            clear: both;
+            background: rgba(0, 0, 0 , 0.2);
+            padding: 5px 10px;
+        }
+    
+        .footer p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 75%;
+            text-align: right;
+        }
+            
+        .footer a {
+            color: #807c72;
+        }
+
+        .floating-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #B5C1AD;
+            color: #FFFFFF;
+            border: none;
+            border-radius: 50%;
+            padding: 10px 15px;
+            font-size: 24px;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+            transition: background-color 0.3s;
+        }
+
+        .floating-button:hover {
+            background-color: #E17034;
+        }
+    
+        </style>
+</head>
+<body>
+    <div class="header">
+        <div class="container_12">
+            <div class="grid_5">
+                <img src="/images/logo.png" alt="Pedal Faster - The modern bicycle magazine" width="216" height="37" class="logo" />
+                <img src="/images/header-triangle.png" alt="" width="116" height="100">
+            </div>
+            <div class="nav grid_7">
+                <a href="/example.html">home</a> / <a href="/header/news.html">news</a> / <a href="/header/archives.html">archives</a> / <a href="/header/about.html">about</a> / <a href="/header/contact.html">contact</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+        <div class="main-story container_12">
+            <div class="grid_6 push_6">
+                <h1>Fixed Gear Forever</h1>
+            </div>
+            <div class="intro grid_3 push_9">
+                <p class="date">16 APRILL 2025</p>
+                <button class="floating-button" onclick="goBack()">←</button>
+                <script>
+                    function goBack() {
+                    window.history.back();
+                }
+                </script>
+            </div>
+            <div class="intro grid_3 push_9">
+            </div>
+        </div>
+        <p>
+            <p>
+                Needless to say the frame is the most important part of the bike. Choosing a frame can be really hard. You can't testride every available frame out there. But almost every manufacturer has geometry data on the website.
+                After a couple of weeks in doubt about what frameset to buy (all part of the fun) I decided it had to be the <a href="http://www.veloheld.de/shop/veloheld-iconx/">veloheld.iconX</a>. A steel gravelracer that met my needs. Affordable, matching geometry, 2,0 kilos frame weight and … available in custom colours! I chose matt black for being stealthier when camping in the wild. After that came the really hard part: waiting for the delivery man.
+                Here it is, a beatiful frame with matching powdercoated steel fork.
+            </p>
+            <img src="/images/veloheld/Veloheld_IconX.jpg" alt="veloheld.iconx" width="50%" height="25%">
+            <p>
+                I also bought the Sram Rival 22 groupset. I use Sram already on my road bike and like it a lot. The Rival groupset is affordable and good for many, many kms. All of Sram's manuals are online. I chose a compact over the now available 1x, so I can ride a small cassette (12-26) for the right cadence at any speed and use the inner 36t chain ring for (loaded) climbing.
+            </p>
+            <img src="/images/veloheld/Sram.jpg" alt="sram_groupset" width="50%" height="25%">
+            <p>
+                For stopping power I have the Avid BB7 Road S mechanical disc brake. Hydraulic disc brakes outperform mechanical ones, but these are easy to install and you can use the regular brake levers (Avid belongs to the same company as Sram). Besides that I like the low tech side of it with just a regular (but longer) brake cable. And the tool is included, it's like Ikea!
+                That didn't take long, already spinning! Not stopping, because there's no cable installed yet.
+            </p>
+            <img src="/images/veloheld/Brakes.jpg" alt="brakes" width="50%" height="25%">
+            <p>
+                With the veloheld frameset came a seperate derailleur hanger. I use little drips of Loctite on the bolts to keep them in place.
+            </p>
+            <img src="/images/veloheld/Back_derailleur.jpg" alt="Back_derailleur" width="50%" height="25%">
+            <p>
+                As you can see in the picture, the headset was already installed. That saves a lot of work. Now it's time to shorten the steerer tube. Don't forget to add spacers first! If they don't slide on immediately, try putting them in hot water (not the carbon ones, I think).
+            </p>
+            <img src="/images/veloheld/Shocks.jpg" alt="shocks" width="50%" height="25%">
+            <p>
+                With the stem installed, draw a line around it. Mark the stem about 2 millimeters lower. Notice that I'm besides wearing an ugly sweater, using A LOT of spacers. I've never ridden the bike, so I prefer to cut the tube several times than once too short.
+            </p>
+            <img src="/images/veloheld/Stem.jpg" alt="stem" width="50%" height="25%">
+            <p>
+                Before I started sawing the custom fork (exciting!) I wrapped extra tape around it. When you're done filing the edges gently tap the star nut in the fork.
+            </p>
+            <img src="/images/veloheld/Fork.jpg" alt="fork" width="50%" height="25%">
+            <p>
+                Reassemble the fork, spacers, stem and the handlebars. The seatpost clamp was already installed as well. Just slide in the seatpost and mount the saddle. It's starting to look like a bike!
+                Slide the brake levers into place. Tape the four outer cables temporarily to the handlebar and determine the total length before cutting them.
+                Install the brake cables. Don't you love how the end is one of the very few things on a bike that hasn't changed for years and years?
+                The veloheld.iconX has an "old school" threaded bottom bracket (BSA). Hurray! All you need is some grease and one big ass tool. Srew in one side to the left, the other one to the right. After that you can install the cranks.
+            </p>
+            <img src="/images/veloheld/Assemble.jpg" alt="assembled" width="50%" height="25%">
+            <p>
+                The Rival front derailleur is available as a braze-on type only. The veloheld doesn't have a eyelet, but a clamp band adapter can easily solve that problem.
+                The rear derailleur is in place. The chain can be measured and made to size according to the manual. Cut the excess inner brake and shift cables and the bike is ready for a first test drive!
+            </p>
+            <img src="/images/veloheld/Front_derailleur.jpg" alt="Front_derailleur" width="50%" height="25%">
+            <p>
+                And done! Happy with the 2x11 drive train.
+            </p>
+            <img src="/images/veloheld/Beauty1.jpg" alt="Beauty1" width="50%" height="25%">
+            <p>
+                And the dynamo in front wheel for commuting and night rides.
+            </p>
+            <img src="/images/veloheld/Beauty2.jpg" alt="Beauty2" width="50%" height="25%">
+            <p>
+                I love the stylish logos on the iconX. The right one is the top tube.
+            </p>
+            <img src="/images/veloheld/Beauty3.jpg" alt="Beauty3" width="50%" height="25%">
+        </p>
+
+        <div class="footer clearfix">
+            <div class="container_12">
+                <p class="grid_12"><a href="/footer/legal_information.html">Legal Information</a> | <a href="/footer/privacy_policy.html">Privacy Policy</a> | <a href="/footer/copyright.html">Copyright &copy; Pedal Faster 2025</a></p>
+            </div>
+        </div>
+</body>
+</html>

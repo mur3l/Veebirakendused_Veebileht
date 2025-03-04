@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #99aa9a;
+    font-family: QuicksandBook, Arial, Helvetica, sans-serif;
+}
+
+ul.menu {
+    font-family: QuicksandBook, Arial, Helvetica, sans-serif;
+    color: black;
+    position: relative;
+    cursor: pointer;
+    list-style: none;
+}
+
+ul.menu li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    position: relative;
+}
+
+ul.menu li:hover .submenu {
+    display: block;
+    opacity: 1;
+    pointer-events: all;
+    top: 100%;
+}
+
+
+.menu .submenu {
+    font-family: QuicksandBook, Arial, Helvetica, sans-serif;
+    color: #413f3b;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top: 0%;
+    left: 15%;
+    background-color: #413f3b;
+    border: 1px solid white;
+    border-radius: 1rem;
+    padding: 1rem;
+    transition: all .3s ease;
+    z-index: 1000;
+    
+}
+
+.menu .submenu li {
+    color: #413f3b;
+    padding: 1rem;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: background .2s ease;
+}
+
+.menu .submenu li:nth-child(1):hover {
+    background-color: #E17034;
+    color: #413f3b;
+}
+.menu .submenu li:nth-child(2):hover {
+    background-color: #E17034;
+    color: #413f3b;
+}
+.menu .submenu li:nth-child(3):hover {
+    background-color: #E17034;
+    color: #413f3b;
+}
+.menu .submenu li:nth-child(4):hover {
+    background-color: #E17034;
+    color: #413f3b;
+}
+.menu .submenu li:nth-child(5):hover {
+    background-color: #E17034;
+    color: #413f3b;
+}
+.menu .submenu li:nth-child(6):hover {
+    background-color: #E17034;
+    color: #413f3b;
+}
+.menu .submenu li:nth-child(7):hover {
+    background-color: #E17034;
+    color: #413f3b;
+}
+.menu .submenu li:nth-child(8):hover {
+    background-color: #E17034;
+    color: #413f3b;
+}
+.menu .submenu li:nth-child(9):hover {
+    background-color: #E17034;
+    color: #413f3b;
+}
+.menu .submenu li:nth-child(10):hover {
+    background-color: #E17034;
+    color: #413f3b;
+}
+
+.menu .submenu li {
+    display: block;
+    width: 100%;
+}
