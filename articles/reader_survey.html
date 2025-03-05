@@ -285,23 +285,27 @@
                     </form>
                     <div id="commentList" class="comment-list"></div>
                 </div>
-            
+                
                 <script>
                     document.addEventListener("DOMContentLoaded", () => {
                         loadComments();
+                        document.getElementById('commentForm').addEventListener('submit', function(event) {
+                            event.preventDefault();
+                            addComment();
+                        });
                     });
-            
+                
                     function addComment() {
                         const commentText = document.getElementById('commentText').value;
                         if (commentText.trim() !== '') {
                             const commentList = document.getElementById('commentList');
                             const commentDiv = document.createElement('div');
                             commentDiv.className = 'comment';
-            
+                
                             const commentContent = document.createElement('div');
                             commentContent.className = 'comment-text';
                             commentContent.textContent = commentText;
-            
+                
                             const deleteButton = document.createElement('button');
                             deleteButton.className = 'delete-button';
                             deleteButton.textContent = 'Delete';
@@ -309,22 +313,22 @@
                                 commentList.removeChild(commentDiv);
                                 saveComments();
                             };
-            
+                
                             commentDiv.appendChild(commentContent);
                             commentDiv.appendChild(deleteButton);
-            
+                
                             commentList.insertBefore(commentDiv, commentList.firstChild);
-            
+                
                             document.getElementById('commentText').value = '';
-            
+                
                             saveComments();
-            
+                
                             if (commentList.children.length > 2) {
                                 commentList.removeChild(commentList.lastChild);
                             }
                         }
                     }
-            
+                
                     function saveComments() {
                         const commentList = document.getElementById('commentList');
                         const comments = [];
@@ -333,18 +337,18 @@
                         }
                         localStorage.setItem('comments', JSON.stringify(comments));
                     }
-            
+                
                     function loadComments() {
                         const comments = JSON.parse(localStorage.getItem('comments')) || [];
                         const commentList = document.getElementById('commentList');
                         for (const commentText of comments) {
                             const commentDiv = document.createElement('div');
                             commentDiv.className = 'comment';
-            
+                
                             const commentContent = document.createElement('div');
                             commentContent.className = 'comment-text';
                             commentContent.textContent = commentText;
-            
+                
                             const deleteButton = document.createElement('button');
                             deleteButton.className = 'delete-button';
                             deleteButton.textContent = 'Delete';
@@ -352,13 +356,15 @@
                                 commentList.removeChild(commentDiv);
                                 saveComments();
                             };
-            
+                
                             commentDiv.appendChild(commentContent);
                             commentDiv.appendChild(deleteButton);
-            
+                
                             commentList.appendChild(commentDiv);
                         }
                     }
+                </script>
+                
                 </script>
             </div>
         </div>
